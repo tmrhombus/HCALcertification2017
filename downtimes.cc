@@ -436,20 +436,82 @@ void downtimes(){
   wk38_totalloss 
  };
  int cols_hcal_totalbyweek[] = {
-  TColor::GetColor("#9e0142"), // red1
-  TColor::GetColor("#d53e4f"), // red2
-  TColor::GetColor("#f46d43"), // orange1
-  TColor::GetColor("#fdae61"), // orange2
-  TColor::GetColor("#fee08b"), // orange3
-  TColor::GetColor("#ffffbf"), // yellow1
-  TColor::GetColor("#e6f598"), // yellow2
-  TColor::GetColor("#abdda4"), // green1
-  TColor::GetColor("#66c2a5"), // green2
-  TColor::GetColor("#3288bd"), // blue
-  TColor::GetColor("#5e4fa2"), // purple1
-  TColor::GetColor("#2d004b"), // purple2
-  37,
-  38
+  //// kBird palette
+  //TColor::GetColor("#FED12C"),
+  //TColor::GetColor("#EBC343"),
+  //TColor::GetColor("#CFBB5A"),
+  //TColor::GetColor("#A3BE6C"),
+  //TColor::GetColor("#74BE81"),
+  //TColor::GetColor("#3EB99C"),
+  //TColor::GetColor("#1DAFB3"),
+  //TColor::GetColor("#1DAFB3"),
+  //TColor::GetColor("#05A4CA"),
+  //TColor::GetColor("#0E8FD1"),
+  //TColor::GetColor("#137AD8"),
+  //TColor::GetColor("#1064DC"),
+  //TColor::GetColor("#1D48BC"),
+  //TColor::GetColor("#352A87"),
+  //TColor::GetColor("#352A87"),
+  //// kCMYK palette
+  //TColor::GetColor("#34322C"),
+  //TColor::GetColor("#767563"),
+  //TColor::GetColor("#A39F70"),
+  //TColor::GetColor("#C7BE6F"),
+  //TColor::GetColor("#D7B768"),
+  //TColor::GetColor("#DFA866"),
+  //TColor::GetColor("#D88D6C"),
+  //TColor::GetColor("#C87078"),
+  //TColor::GetColor("#B55387"),
+  //TColor::GetColor("#9A5B9B"),
+  //TColor::GetColor("#8168AF"),
+  //TColor::GetColor("#6B82C4"),
+  //TColor::GetColor("#5490D0"),
+  //TColor::GetColor("#3D95D6"),
+  //// kDarkRainBow palette
+  //TColor::GetColor("#9D2A2B"),
+  //TColor::GetColor("#9B312C"),
+  //TColor::GetColor("#A55231"),
+  //TColor::GetColor("#B27B39"),
+  //TColor::GetColor("#AE9437"),
+  //TColor::GetColor("#A29E35"),
+  //TColor::GetColor("#868F30"),
+  //TColor::GetColor("#657B2D"),
+  //TColor::GetColor("#42652C"),
+  //TColor::GetColor("#385B34"),
+  //TColor::GetColor("#315142"),
+  //TColor::GetColor("#2D445B"),
+  //TColor::GetColor("#2B3F6D"),
+  //TColor::GetColor("#2B3F79"),
+  //// kPastel palette
+  //TColor::GetColor("#6AA8DB"),
+  //TColor::GetColor("#8FC0DC"),
+  //TColor::GetColor("#AFD6C3"),
+  //TColor::GetColor("#CEE9A1"),
+  //TColor::GetColor("#DCE48F"),
+  //TColor::GetColor("#DFD780"),
+  //TColor::GetColor("#D1BD75"),
+  //TColor::GetColor("#D4B27A"),
+  //TColor::GetColor("#DFAC85"),
+  //TColor::GetColor("#D79D95"),
+  //TColor::GetColor("#CE8FAB"),
+  //TColor::GetColor("#C282CE"),
+  //TColor::GetColor("#BA71E1"),
+  //TColor::GetColor("#B45DEC"),
+  //// kViridis palette
+  TColor::GetColor("#DDD908"),
+  TColor::GetColor("#A0CC1D"),
+  TColor::GetColor("#71BF33"),
+  TColor::GetColor("#49B349"),
+  TColor::GetColor("#31A15A"),
+  TColor::GetColor("#218F67"),
+  TColor::GetColor("#1D7C6E"),
+  TColor::GetColor("#1E6971"),
+  TColor::GetColor("#215772"),
+  TColor::GetColor("#274471"),
+  TColor::GetColor("#2C316D"),
+  TColor::GetColor("#311E63"),
+  TColor::GetColor("#291246"),
+  TColor::GetColor("#1A091E"),
  };
 
  int   nval_hcal_totalbyweek   = sizeof(vals_hcal_totalbyweek)/sizeof(vals_hcal_totalbyweek[0]);

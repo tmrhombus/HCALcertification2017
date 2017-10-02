@@ -61,7 +61,11 @@ void makecolorpalette(){
  gPad->SetTickx();
  gPad->SetTicky();
  gStyle->SetLineWidth(3);
- gStyle->SetPalette(kBird);
+ gStyle->SetPalette(kViridis);
+ //gStyle->SetPalette(kPastel);
+ //gStyle->SetPalette(kCMYK);
+ //gStyle->SetPalette(kDarkRainBow);
+ //gStyle->SetPalette(kBird);
 
  // Draw histos
  hs ->Draw("HIST PFC");
