@@ -22,6 +22,14 @@ void makecolorpalette(){
  TH1F *h_wk36 = new TH1F ("h_wk36","wk36",1,0.,2.);
  TH1F *h_wk37 = new TH1F ("h_wk37","wk37",1,0.,2.);
  TH1F *h_wk38 = new TH1F ("h_wk38","wk38",1,0.,2.);
+ TH1F *h_wk39 = new TH1F ("h_wk39","wk39",1,0.,2.);
+ TH1F *h_wk40 = new TH1F ("h_wk40","wk40",1,0.,2.);
+ TH1F *h_wk41 = new TH1F ("h_wk41","wk41",1,0.,2.);
+ TH1F *h_wk42 = new TH1F ("h_wk42","wk42",1,0.,2.);
+ TH1F *h_wk43 = new TH1F ("h_wk43","wk43",1,0.,2.);
+ TH1F *h_wk44 = new TH1F ("h_wk44","wk44",1,0.,2.);
+ TH1F *h_wk45 = new TH1F ("h_wk45","wk45",1,0.,2.);
+ TH1F *h_wk46 = new TH1F ("h_wk46","wk46",1,0.,2.);
 
  // fill histos
  h_wk24 -> Fill(1,1);
@@ -38,6 +46,14 @@ void makecolorpalette(){
  h_wk36 -> Fill(1,1);
  h_wk37 -> Fill(1,1);
  h_wk38 -> Fill(1,1);
+ h_wk39 -> Fill(1,1);
+ h_wk40 -> Fill(1,1);
+ h_wk41 -> Fill(1,1);
+ h_wk42 -> Fill(1,1);
+ h_wk43 -> Fill(1,1);
+ h_wk44 -> Fill(1,1);
+ h_wk45 -> Fill(1,1);
+ h_wk46 -> Fill(1,1);
 
  THStack * hs = new THStack("hs","stack");
  hs -> Add (h_wk24);
@@ -54,6 +70,14 @@ void makecolorpalette(){
  hs -> Add (h_wk36);
  hs -> Add (h_wk37);
  hs -> Add (h_wk38);
+ hs -> Add (h_wk39);
+ hs -> Add (h_wk40);
+ hs -> Add (h_wk41);
+ hs -> Add (h_wk42);
+ hs -> Add (h_wk43);
+ hs -> Add (h_wk44);
+ hs -> Add (h_wk45);
+ hs -> Add (h_wk46);
  
  // make canvas and text
  TCanvas* canvas = new TCanvas("canvas","canvas",1000,1000);

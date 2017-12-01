@@ -22,30 +22,30 @@ void downtimes(){
  
  // Week 25
  float wk25_cmsrecorded = 2635.9;
- float  wk25_LV_297359 = 27;  // HFM05 LV           http://cmsonline.cern.ch/cms-elog/992675
- float  wk25_HV_297432 = 2.5; // HEP18 voltage drop http://cmsonline.cern.ch/cms-elog/993024
- float  wk25_HV_297467 = 5;   // HEM05 voltage drop http://cmsonline.cern.ch/cms-elog/993047
- float  wk25_HV_297474 = 6.3; // HEM05 voltage drop http://cmsonline.cern.ch/cms-elog/993129
- float  wk25_X_297659  = 3.2; // high rate
- float  wk25_HFSEU     = 35;
+ float  wk25_HFSEU_297359 = 27;  // HFM05 LV        http://cmsonline.cern.ch/cms-elog/992675
+ float  wk25_HEHV_297432    = 2.5; // HEP18 voltage drop http://cmsonline.cern.ch/cms-elog/993024
+ float  wk25_HEHV_297467    = 5;   // HEM05 voltage drop http://cmsonline.cern.ch/cms-elog/993047
+ float  wk25_HEHV_297474    = 6.3; // HEM05 voltage drop http://cmsonline.cern.ch/cms-elog/993129
+ float  wk25_X_297659     = 3.2; // high rate
+ float  wk25_HFSEU        = 35;
  float wk25_totalloss =
-        wk25_LV_297359+ 
-        wk25_HV_297432+ 
-        wk25_HV_297467+ 
-        wk25_HV_297474+ 
-        wk25_X_297659 + 
-        wk25_HFSEU    ; // = 79;
+        wk25_HFSEU_297359+ 
+        wk25_HEHV_297432   + 
+        wk25_HEHV_297467   + 
+        wk25_HEHV_297474   + 
+        wk25_X_297659    + 
+        wk25_HFSEU       ; // = 79;
  
  // Week 26
  float wk26_cmsrecorded = 564.51;
- float  wk26_HV_297656 = 18.42; // HEM05 / HEM14 HV 
+ float  wk26_HEHV_297656 = 18.42; // HEM05 / HEM14 HV 
            // http://cmsonline.cern.ch/cms-elog/993954
            // http://cmsonline.cern.ch/cms-elog/993971
- float  wk26_HV_297722 = 2.72;  // HEM05 HV http://cmsonline.cern.ch/cms-elog/994300
+ float  wk26_HEHV_297722 = 2.72;  // HEM05 HV http://cmsonline.cern.ch/cms-elog/994300
  float  wk26_HFSEU     = 23.41 ;
  float wk26_totalloss = 
-        wk26_HV_297656+
-        wk26_HV_297722+
+        wk26_HEHV_297656+
+        wk26_HEHV_297722+
         wk26_HFSEU    ; // = 44.55;
 
  // Week 27
@@ -57,25 +57,25 @@ void downtimes(){
 
  // Week 28
  float wk28_cmsrecorded = 1199.2;
- float  wk28_HV_299065 = 1.74; // HBM03 HV http://cmsonline.cern.ch/cms-elog/997111
+ float  wk28_HBHV_299065 = 1.74; // HBM03 HV http://cmsonline.cern.ch/cms-elog/997111
  float  wk28_HFSEU     = 0.46; 
  float wk28_totalloss = 
-        wk28_HV_299065+
+        wk28_HBHV_299065+
         wk28_HFSEU    ; // = 2.2;
  
  // Week 29
  float wk29_cmsrecorded = 1158.7;
- float  wk29_HV_299443       = 30.68; // HEP04 / HEM05 HV 
- float  wk29_HV_299481       = 4.85;  // HEP04 / HEM05 HV 
+ float  wk29_HEHV_299443       = 30.68; // HEP04 / HEM05 HV 
+ float  wk29_HEHV_299481       = 4.85;  // HEP04 / HEM05 HV 
  float  wk29_ngFEC_299592    = 49.2;  // peltier loss, FEC reset on HEP17
- float  wk29_HV_299649       = 33.62; // HEP04 / HEM05 HV 
+ float  wk29_HEHV_299649       = 33.62; // HEP04 / HEM05 HV 
  float  wk29_other           = 0.12;  // reported downtime is 118.47
  float  wk29_HFSEU           = 0.;    // NO HF SEU THIS TIME
  float wk29_totalloss    =
-        wk29_HV_299443   +
-        wk29_HV_299481   +
+        wk29_HEHV_299443   +
+        wk29_HEHV_299481   +
         wk29_ngFEC_299592+
-        wk29_HV_299649   +
+        wk29_HEHV_299649   +
         wk29_other       +
         wk29_HFSEU       ; // = 118.47;
  
@@ -86,48 +86,48 @@ void downtimes(){
  float wk31_cmsrecorded = 3026.36;
  float  wk31_BD_300087 = 0.2;  // HO bad data
  float  wk31_BD_300240 = 0.46; // bad data - crates 20,24,30
- float  wk31_HV_300517 = 18.2; // HEM01 HV off
+ float  wk31_HEHV_300517 = 18.2; // HEM01 HV off
  float  wk31_HFSEU     = 0.;   // NO HF SEU
  float wk31_totalloss =
         wk31_BD_300087+ 
         wk31_BD_300240+ 
-        wk31_HV_300517+ 
+        wk31_HEHV_300517+ 
         wk31_HFSEU    ; // = 18.86;
  
  // Week 32
  float wk32_cmsrecorded = 1725.5;
- float  wk32_HV_299996 = 0.01; // HEP18 HV (low PU run)
- float  wk32_HV_300515 = 25.8; // HBM03 HV
- float  wk32_HV_300560 = 0.43; // HBM03 HV
+ float  wk32_HEHV_299996 = 0.01; // HEP18 HV (low PU run)
+ float  wk32_HBHV_300515 = 25.8; // HBM03 HV
+ float  wk32_HBHV_300560 = 0.43; // HBM03 HV
  float  wk32_DCS       = 1.;   // HBHEb DCS
  float  wk32_HFSEU     = 5.11; // run 300464
  float  wk32_other     = 0.25;  // total loss is reported as 32.6
  float wk32_totalloss =
-        wk32_HV_299996+
-        wk32_HV_300515+
-        wk32_HV_300560+
+        wk32_HEHV_299996+
+        wk32_HBHV_300515+
+        wk32_HBHV_300560+
         wk32_DCS      +
         wk32_HFSEU    +
         wk32_other    ; // = 32.6;
  
   // Week 33
  float wk33_cmsrecorded = 2136.46;
- float  wk33_HV_301524 = 1.03; // HBP04 HV trip
- float  wk33_HV        = 0.62; // HBP04 HV trip
+ float  wk33_HBHV_301524 = 1.03; // HBP04 HV trip
+ float  wk33_HBHV        = 0.62; // HBP04 HV trip
  float  wk33_HFSEU     = 0.52; // run 301447
  float wk33_totalloss =
-        wk33_HV_301524+
-        wk33_HV       +
+        wk33_HBHV_301524+
+        wk33_HBHV       +
         wk33_HFSEU    ; // = 2.17;
 
   // Week 34
  float wk34_cmsrecorded = 1825.3;
- float  wk34_HV_300785 = 2.74; // HBP05 HV trip
- float  wk34_HV_300817 = 7;    // HBP04 HV trip, bad data burst
+ float  wk34_HBHV_300785 = 2.74; // HBP05 HV trip
+ float  wk34_HBHV_300817 = 7;    // HBP04 HV trip, bad data burst
  float  wk34_HFSEU     = 0.35; // HF SEU
  float wk34_totalloss =
-        wk34_HV_300785+
-        wk34_HV_300817+
+        wk34_HBHV_300785+
+        wk34_HBHV_300817+
         wk34_HFSEU    ; // = 10.1;
 
   // Week 35
@@ -141,17 +141,17 @@ void downtimes(){
   // Week 36
  float wk36_cmsrecorded = 2493.1;
  float  wk36_HF_302344 = 0.01; // HF high amplitudes, Fed 1121 issue
- float  wk36_HV_302388 = 1.25; // HEP01 HEP18 HV trip
+ float  wk36_HEHV_302388 = 1.25; // HEP01 HEP18 HV trip
  float  wk36_LV_302448 = 1.6;  // LV powercycle, Fed1121
- float  wk36_HV_302479 = 0.46; // HBP07 HV trip
- float  wk36_HV_302573 = 5.42; // HEM14 HV trip
+ float  wk36_HBHV_302479 = 0.46; // HBP07 HV trip
+ float  wk36_HEHV_302573 = 5.42; // HEM14 HV trip
  float  wk36_HO_302596 = 0.74; // HO high amplitudes, CapID errors
  float wk36_totalloss =
         wk36_HF_302344+
-        wk36_HV_302388+
+        wk36_HEHV_302388+
         wk36_LV_302448+
-        wk36_HV_302479+
-        wk36_HV_302573+
+        wk36_HBHV_302479+
+        wk36_HEHV_302573+
         wk36_HO_302596; // = 9.48;
  
   // MD3 / TS2 week 37/38
@@ -165,8 +165,67 @@ void downtimes(){
  float  wk38_LV_302634 = 0.68; 
  float wk38_totalloss = wk38_LV_302634; 
 
+/////////////////////////////////
+  // Week 39
+ float wk39_cmsrecorded = 2277.;
+ float  wk39_HF_303832 = 0.46; // HF bad data http://cmsonline.cern.ch/cms-elog/1011411
+ float wk39_totalloss = wk39_HF_303832; 
 
- ///// Calculate sums up to week 36
+  // Week 40
+ float wk40_cmsrecorded = 3865.4;
+ float  wk40_HFSEU_304209 = 6.34; // HFP Q2 LV http://cmsonline.cern.ch/cms-elog/1012752
+ float  wk40_HEHV_304292 = 9.44; // HEM17 HV http://cmsonline.cern.ch/cms-elog/1013022
+ float  wk40_HFSEU_304447 = 1.3;  // HF LV http://cmsonline.cern.ch/cms-elog/1013600
+ float wk40_totalloss =  
+        wk40_HFSEU_304209 +
+        wk40_HEHV_304292 +
+        wk40_HFSEU_304447 ; // = 17.08
+
+  // Week 41
+ float wk41_cmsrecorded = 4223.7;
+ float  wk41_HFSEU_304661 = 9.15; // HF LV http://cmsonline.cern.ch/cms-elog/1014231
+ float  wk41_HF_304797 = 3.6;  // HF bad data http://cmsonline.cern.ch/cms-elog/1014863
+                                          //  http://cmsonline.cern.ch/cms-elog/1014865
+ float wk41_totalloss =  
+        wk41_HFSEU_304661 +
+        wk41_HF_304797 ; // = 12.75
+
+  // Week 42
+ float wk42_cmsrecorded = 3818.;
+ float  wk42_HFSEU_305310 = 1.63; // HF LV http://cmsonline.cern.ch/cms-elog/1016775
+ float wk42_totalloss =  wk42_HFSEU_305310;
+
+  // Week 43
+ float wk43_cmsrecorded = 3426.5;
+ float  wk43_HF_305376 = 1.23; // HF bad fiber http://cmsonline.cern.ch/cms-elog/1017097
+ float wk43_totalloss =  wk43_HF_305376;
+   // This week there was also 49.4 from turbine failure, NOT HCAL
+   // http://cmsonline.cern.ch/cms-elog/1017701
+
+  // Week 44
+ float wk44_cmsrecorded = 2983.4;
+ float  wk44_HFSEU_305814 = 1.29; // HF LV & HE HV http://cmsonline.cern.ch/cms-elog/1018384
+ float  wk44_HFSEU_306092 = 0.87; // HF LV http://cmsonline.cern.ch/cms-elog/1019624
+ float wk44_totalloss = 
+        wk44_HFSEU_305814 +
+        wk44_HFSEU_306092 ; // = 2.16
+
+  // Week 45
+ float wk45_cmsrecorded = 3109.6;
+ float  wk45_HEHV_306125 = 2.52; // HE HV http://cmsonline.cern.ch/cms-elog/1019793
+ float  wk45_HEHV_306154 = 4.48; // HE HV http://cmsonline.cern.ch/cms-elog/1019991
+ float wk45_totalloss = 
+        wk45_HEHV_306125 +
+        wk45_HEHV_306154 ; // = 7
+
+  // Week 46
+ float wk46_cmsrecorded = 22.;
+ float  wk46_HF_304119 = 0.46; // HF,HEP17 bad data http://cmsonline.cern.ch/cms-elog/1012226
+ float wk46_totalloss = wk46_HF_304119; 
+
+
+
+ ///// Calculate sums up to week 46
  // Total LHC delivered luminosity 
  float total_cmsrecorded =
   wk24_cmsrecorded 
@@ -182,7 +241,15 @@ void downtimes(){
   + wk35_cmsrecorded 
   + wk36_cmsrecorded 
   + wk37_cmsrecorded 
-  + wk38_cmsrecorded ;
+  + wk38_cmsrecorded 
+  + wk39_cmsrecorded 
+  + wk40_cmsrecorded 
+  + wk41_cmsrecorded 
+  + wk42_cmsrecorded 
+  + wk43_cmsrecorded 
+  + wk44_cmsrecorded 
+  + wk45_cmsrecorded 
+  + wk46_cmsrecorded ;
  
  // HCAL total losses before ps exchange
  float total_HCALloss_before =
@@ -201,15 +268,23 @@ void downtimes(){
   + wk35_totalloss 
   + wk36_totalloss 
   + wk37_totalloss 
-  + wk38_totalloss ;
+  + wk38_totalloss 
+  + wk39_totalloss 
+  + wk40_totalloss 
+  + wk41_totalloss 
+  + wk42_totalloss 
+  + wk43_totalloss 
+  + wk44_totalloss 
+  + wk45_totalloss 
+  + wk46_totalloss ;
  // HCAL total losses
  float total_HCALloss =
   total_HCALloss_before + total_HCALloss_after ;
- 
 
  // HF SEU losses before ps exchange
  float HFSEU_beforereplace = 
   wk24_HFSEU  
+  + wk25_HFSEU_297359    // HFM05 LV http://cmsonline.cern.ch/cms-elog/992675
   + wk25_HFSEU  
   + wk26_HFSEU
   + wk27_HFSEU
@@ -218,39 +293,51 @@ void downtimes(){
  float HFSEU_afterreplace = 
   wk32_HFSEU
   + wk33_HFSEU 
-  + wk34_HFSEU ;
+  + wk34_HFSEU 
+  + wk40_HFSEU_304209  // HFP Q2 LV http://cmsonline.cern.ch/cms-elog/1012752
+  + wk40_HFSEU_304447  // HF LV http://cmsonline.cern.ch/cms-elog/1013600
+  + wk41_HFSEU_304661  // HF LV http://cmsonline.cern.ch/cms-elog/1014231
+  + wk42_HFSEU_305310  // HF LV http://cmsonline.cern.ch/cms-elog/1016775
+  + wk44_HFSEU_305814  // HF LV & HE HV http://cmsonline.cern.ch/cms-elog/1018384
+  + wk44_HFSEU_306092; // HF LV http://cmsonline.cern.ch/cms-elog/1019624
  // Total HF SEU losses
  float total_HFSEU = HFSEU_beforereplace + HFSEU_afterreplace;
 
-
  //  Low Voltage trips
  float total_LV =
-        wk25_LV_297359    + // HFM05 LV http://cmsonline.cern.ch/cms-elog/992675
         wk35_LV_302277    + // HF LV + CapID
         wk36_LV_302448    + // LV powercycle, Fed1121
         wk38_LV_302634    ; // LV 
  //  High Voltage trips
- float total_HV =
-        wk25_HV_297432    + // HEP18 HV http://cmsonline.cern.ch/cms-elog/993024
-        wk25_HV_297467    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/993047
-        wk25_HV_297474    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/993129
-        wk26_HV_297656    + // HEM05 / HEM14 HV 
-        wk26_HV_297722    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/994300
-        wk28_HV_299065    + // HBM03 HV http://cmsonline.cern.ch/cms-elog/997111
-        wk29_HV_299443    + // HEP04 / HEM05 HV 
-        wk29_HV_299481    + // HEP04 / HEM05 HV 
-        wk29_HV_299649    + // HEP04 / HEM05 HV 
-        wk31_HV_300517    + // HEM01 HV off
-        wk32_HV_299996    + // HEP18 HV (low PU run)
-        wk32_HV_300515    + // HBM03 HV
-        wk32_HV_300560    + // HBM03 HV
-        wk33_HV_301524    + // HBP04 HV trip
-        wk33_HV           + // HBP04 HV trip
-        wk34_HV_300785    + // HBP05 HV trip
-        wk34_HV_300817    + // HBP04 HV trip, bad data burst
-        wk36_HV_302388    + // HEP01 HEP18 HV trip
-        wk36_HV_302479    + // HBP07 HV trip
-        wk36_HV_302573    ; // HEM14 HV trip
+ float HE_HV = 
+        wk25_HEHV_297432    + // HEP18 HV http://cmsonline.cern.ch/cms-elog/993024
+        wk25_HEHV_297467    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/993047
+        wk25_HEHV_297474    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/993129
+        wk26_HEHV_297656    + // HEM05 / HEM14 HV 
+        wk26_HEHV_297722    + // HEM05 HV http://cmsonline.cern.ch/cms-elog/994300
+        wk29_HEHV_299443    + // HEP04 / HEM05 HV 
+        wk29_HEHV_299481    + // HEP04 / HEM05 HV 
+        wk29_HEHV_299649    + // HEP04 / HEM05 HV 
+        wk31_HEHV_300517    + // HEM01 HV off
+        wk32_HEHV_299996    + // HEP18 HV (low PU run)
+        wk36_HEHV_302388    + // HEP01 HEP18 HV trip
+        wk36_HEHV_302573    + // HEM14 HV trip
+        wk40_HEHV_304292    + // HEM17 HV http://cmsonline.cern.ch/cms-elog/1013022
+        wk45_HEHV_306125    + // HE HV http://cmsonline.cern.ch/cms-elog/1019793
+        wk45_HEHV_306154    ; // HE HV http://cmsonline.cern.ch/cms-elog/1019991
+
+ float HB_HV = 
+        wk28_HBHV_299065    + // HBM03 HV http://cmsonline.cern.ch/cms-elog/997111
+        wk32_HBHV_300515    + // HBM03 HV
+        wk32_HBHV_300560    + // HBM03 HV
+        wk33_HBHV_301524    + // HBP04 HV trip
+        wk33_HBHV           + // HBP04 HV trip
+        wk34_HBHV_300785    + // HBP05 HV trip
+        wk34_HBHV_300817    + // HBP04 HV trip, bad data burst
+        wk36_HBHV_302479    ; // HBP07 HV trip
+
+ float total_HV = HE_HV + HB_HV;
+
  //   Other DCS issues
  float total_otherDCS =
         wk32_DCS          ; // HBHEb DCS
@@ -267,7 +354,11 @@ void downtimes(){
         wk31_BD_300240    + // bad data - crates 20,24,30
         wk35_HF_302031    + // HF high amplitudes
         wk36_HF_302344    + // HF high amplitudes, Fed 1121 issue
-        wk36_HO_302596    ; // HO high amplitudes, CapID errors
+        wk36_HO_302596    + // HO high amplitudes, CapID errors
+        wk39_HF_303832    + // HF bad data http://cmsonline.cern.ch/cms-elog/1011411
+        wk41_HF_304797    + // HF bad data http://cmsonline.cern.ch/cms-elog/1014863
+        wk43_HF_305376    + // HF bad fiber http://cmsonline.cern.ch/cms-elog/1017097
+        wk46_HF_304119    ; // HF,HEP17 bad data http://cmsonline.cern.ch/cms-elog/1012226
 
  //   Other losses
  float total_Other =
@@ -331,10 +422,12 @@ void downtimes(){
  // 
 
  printf("HCAL Loss breakdown  \n");
- printf(" total_HFSEU    %5.1f /pb \n", total_HFSEU    );       
- printf(" total_LV       %5.1f /pb \n", total_LV       );       
- printf(" total_HV       %5.1f /pb \n", total_HV       );       
- printf(" total_otherDCS %5.1f /pb \n", total_otherDCS );       
+ printf("  total_HFSEU    %5.1f /pb \n", total_HFSEU    );       
+ printf("  total_LV       %5.1f /pb \n", total_LV       );       
+ printf("   total_HEHV    %5.1f /pb \n", HE_HV       );       
+ printf("   total_HBHV    %5.1f /pb \n", HB_HV       );       
+ printf("  total_HV       %5.1f /pb \n", total_HV       );       
+ printf("  total_otherDCS %5.1f /pb \n", total_otherDCS );       
  printf(" total_DCS      %5.1f /pb \n", total_DCS      );       
  printf(" total_ngFEC    %5.1f /pb \n", total_ngFEC    );       
  printf(" total_BadData  %5.1f /pb \n", total_BadData  );       
@@ -370,6 +463,14 @@ void downtimes(){
   printf("  week 36 %5.1f /pb \n", wk36_totalloss);
   printf("  week 37 %5.1f /pb \n", wk37_totalloss);
   printf("  week 38 %5.1f /pb \n", wk38_totalloss);
+  printf("  week 39 %5.1f /pb \n", wk39_totalloss);
+  printf("  week 40 %5.1f /pb \n", wk40_totalloss);
+  printf("  week 41 %5.1f /pb \n", wk41_totalloss);
+  printf("  week 42 %5.1f /pb \n", wk42_totalloss);
+  printf("  week 43 %5.1f /pb \n", wk43_totalloss);
+  printf("  week 44 %5.1f /pb \n", wk44_totalloss);
+  printf("  week 45 %5.1f /pb \n", wk45_totalloss);
+  printf("  week 46 %5.1f /pb \n", wk46_totalloss);
 
 
  ///// Make Pie Charts
@@ -433,85 +534,40 @@ void downtimes(){
   wk35_totalloss,
   wk36_totalloss,
   wk37_totalloss,
-  wk38_totalloss 
+  wk38_totalloss, 
+  wk39_totalloss, 
+  wk40_totalloss, 
+  wk41_totalloss, 
+  wk42_totalloss, 
+  wk43_totalloss, 
+  wk44_totalloss, 
+  wk45_totalloss, 
+  wk46_totalloss
  };
  int cols_hcal_totalbyweek[] = {
-  //// kBird palette
-  //TColor::GetColor("#FED12C"),
-  //TColor::GetColor("#EBC343"),
-  //TColor::GetColor("#CFBB5A"),
-  //TColor::GetColor("#A3BE6C"),
-  //TColor::GetColor("#74BE81"),
-  //TColor::GetColor("#3EB99C"),
-  //TColor::GetColor("#1DAFB3"),
-  //TColor::GetColor("#1DAFB3"),
-  //TColor::GetColor("#05A4CA"),
-  //TColor::GetColor("#0E8FD1"),
-  //TColor::GetColor("#137AD8"),
-  //TColor::GetColor("#1064DC"),
-  //TColor::GetColor("#1D48BC"),
-  //TColor::GetColor("#352A87"),
-  //TColor::GetColor("#352A87"),
-  //// kCMYK palette
-  //TColor::GetColor("#34322C"),
-  //TColor::GetColor("#767563"),
-  //TColor::GetColor("#A39F70"),
-  //TColor::GetColor("#C7BE6F"),
-  //TColor::GetColor("#D7B768"),
-  //TColor::GetColor("#DFA866"),
-  //TColor::GetColor("#D88D6C"),
-  //TColor::GetColor("#C87078"),
-  //TColor::GetColor("#B55387"),
-  //TColor::GetColor("#9A5B9B"),
-  //TColor::GetColor("#8168AF"),
-  //TColor::GetColor("#6B82C4"),
-  //TColor::GetColor("#5490D0"),
-  //TColor::GetColor("#3D95D6"),
-  //// kDarkRainBow palette
-  //TColor::GetColor("#9D2A2B"),
-  //TColor::GetColor("#9B312C"),
-  //TColor::GetColor("#A55231"),
-  //TColor::GetColor("#B27B39"),
-  //TColor::GetColor("#AE9437"),
-  //TColor::GetColor("#A29E35"),
-  //TColor::GetColor("#868F30"),
-  //TColor::GetColor("#657B2D"),
-  //TColor::GetColor("#42652C"),
-  //TColor::GetColor("#385B34"),
-  //TColor::GetColor("#315142"),
-  //TColor::GetColor("#2D445B"),
-  //TColor::GetColor("#2B3F6D"),
-  //TColor::GetColor("#2B3F79"),
-  //// kPastel palette
-  //TColor::GetColor("#6AA8DB"),
-  //TColor::GetColor("#8FC0DC"),
-  //TColor::GetColor("#AFD6C3"),
-  //TColor::GetColor("#CEE9A1"),
-  //TColor::GetColor("#DCE48F"),
-  //TColor::GetColor("#DFD780"),
-  //TColor::GetColor("#D1BD75"),
-  //TColor::GetColor("#D4B27A"),
-  //TColor::GetColor("#DFAC85"),
-  //TColor::GetColor("#D79D95"),
-  //TColor::GetColor("#CE8FAB"),
-  //TColor::GetColor("#C282CE"),
-  //TColor::GetColor("#BA71E1"),
-  //TColor::GetColor("#B45DEC"),
   //// kViridis palette
-  TColor::GetColor("#DDD908"),
-  TColor::GetColor("#A0CC1D"),
-  TColor::GetColor("#71BF33"),
-  TColor::GetColor("#49B349"),
-  TColor::GetColor("#31A15A"),
-  TColor::GetColor("#218F67"),
-  TColor::GetColor("#1D7C6E"),
-  TColor::GetColor("#1E6971"),
-  TColor::GetColor("#215772"),
-  TColor::GetColor("#274471"),
-  TColor::GetColor("#2C316D"),
-  TColor::GetColor("#311E63"),
-  TColor::GetColor("#291246"),
-  TColor::GetColor("#1A091E"),
+  TColor::GetColor("#eddc03"),
+  TColor::GetColor("#c6d410"),
+  TColor::GetColor("#a0cc1d"),
+  TColor::GetColor("#81c42b"),
+  TColor::GetColor("#66bc39"),
+  TColor::GetColor("#4cb547"),
+  TColor::GetColor("#3caa52"),
+  TColor::GetColor("#2e9f5d"),
+  TColor::GetColor("#229366"),
+  TColor::GetColor("#1f876a"),
+  TColor::GetColor("#1d7b6e"),
+  TColor::GetColor("#1d6f70"),
+  TColor::GetColor("#1f6371"),
+  TColor::GetColor("#205872"),
+  TColor::GetColor("#244c71"),
+  TColor::GetColor("#284071"),
+  TColor::GetColor("#2b346e"),
+  TColor::GetColor("#2e2868"),
+  TColor::GetColor("#311c62"),
+  TColor::GetColor("#2d1451"),
+  TColor::GetColor("#230e37"),
+  TColor::GetColor("#1a091e"),
  };
 
  int   nval_hcal_totalbyweek   = sizeof(vals_hcal_totalbyweek)/sizeof(vals_hcal_totalbyweek[0]);
@@ -538,6 +594,14 @@ void downtimes(){
  pie_hcal_totalbyweek->SetEntryLabel(11,"week 36");
  pie_hcal_totalbyweek->SetEntryLabel(12,"week 37");
  pie_hcal_totalbyweek->SetEntryLabel(13,"week 38");
+ pie_hcal_totalbyweek->SetEntryLabel(14,"week 39");
+ pie_hcal_totalbyweek->SetEntryLabel(15,"week 40");
+ pie_hcal_totalbyweek->SetEntryLabel(16,"week 41");
+ pie_hcal_totalbyweek->SetEntryLabel(17,"week 42");
+ pie_hcal_totalbyweek->SetEntryLabel(18,"week 43");
+ pie_hcal_totalbyweek->SetEntryLabel(19,"week 44");
+ pie_hcal_totalbyweek->SetEntryLabel(20,"week 45");
+ pie_hcal_totalbyweek->SetEntryLabel(21,"week 46");
  pie_hcal_totalbyweek->SetEntryLineWidth(0 , 3);
  pie_hcal_totalbyweek->SetEntryLineWidth(1 , 3);
  pie_hcal_totalbyweek->SetEntryLineWidth(2 , 3);
@@ -552,6 +616,14 @@ void downtimes(){
  pie_hcal_totalbyweek->SetEntryLineWidth(11, 3);
  pie_hcal_totalbyweek->SetEntryLineWidth(12, 3);
  pie_hcal_totalbyweek->SetEntryLineWidth(13, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(14, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(15, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(16, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(17, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(18, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(19, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(20, 3);
+ pie_hcal_totalbyweek->SetEntryLineWidth(21, 3);
 
  TLegend *leg_hcal_totalbyweek = pie_hcal_totalbyweek->MakeLegend();
 
@@ -572,7 +644,8 @@ void downtimes(){
  float vals_hcal_totalbytype[] = {
   total_HFSEU   ,
   total_LV      ,
-  total_HV      ,
+  HE_HV    ,
+  HB_HV    ,
   total_otherDCS,
   total_ngFEC   ,
   total_BadData ,
@@ -600,11 +673,12 @@ void downtimes(){
  pie_hcal_totalbytype->SetCircle(.5,.5,.4);
  pie_hcal_totalbytype->SetEntryLabel(0 ,"HFSEU   ");
  pie_hcal_totalbytype->SetEntryLabel(1 ,"LV      ");
- pie_hcal_totalbytype->SetEntryLabel(2 ,"HV      ");
- pie_hcal_totalbytype->SetEntryLabel(3 ,"otherDCS");
- pie_hcal_totalbytype->SetEntryLabel(4 ,"ngFEC   ");
- pie_hcal_totalbytype->SetEntryLabel(5 ,"BadData ");
- pie_hcal_totalbytype->SetEntryLabel(6 ,"Other   ");
+ pie_hcal_totalbytype->SetEntryLabel(2 ,"HE HV   ");
+ pie_hcal_totalbytype->SetEntryLabel(3 ,"HB HV   ");
+ pie_hcal_totalbytype->SetEntryLabel(4 ,"otherDCS");
+ pie_hcal_totalbytype->SetEntryLabel(5 ,"ngFEC   ");
+ pie_hcal_totalbytype->SetEntryLabel(6 ,"BadData ");
+ pie_hcal_totalbytype->SetEntryLabel(7 ,"Other   ");
  pie_hcal_totalbytype->SetEntryLineWidth(0 ,3);
  pie_hcal_totalbytype->SetEntryLineWidth(1 ,3);
  pie_hcal_totalbytype->SetEntryLineWidth(2 ,3);
@@ -612,6 +686,7 @@ void downtimes(){
  pie_hcal_totalbytype->SetEntryLineWidth(4 ,3);
  pie_hcal_totalbytype->SetEntryLineWidth(5 ,3);
  pie_hcal_totalbytype->SetEntryLineWidth(6 ,3);
+ pie_hcal_totalbytype->SetEntryLineWidth(7 ,3);
 
  TLegend *leg_hcal_totalbytype = pie_hcal_totalbytype->MakeLegend();
 
@@ -633,7 +708,8 @@ void downtimes(){
  float vals_hcal_dcsbytype[] = {
   total_HFSEU,
   total_LV ,
-  total_HV ,
+  HE_HV ,
+  HB_HV ,
   total_otherDCS
  };
  int cols_hcal_dcsbytype[] = {
@@ -655,12 +731,14 @@ void downtimes(){
  pie_hcal_dcsbytype->SetCircle(.5,.5,.4);
  pie_hcal_dcsbytype->SetEntryLabel(0 ,"HFSEU   ");
  pie_hcal_dcsbytype->SetEntryLabel(1 ,"LV      ");
- pie_hcal_dcsbytype->SetEntryLabel(2 ,"HV      ");
- pie_hcal_dcsbytype->SetEntryLabel(3 ,"otherDCS");
+ pie_hcal_dcsbytype->SetEntryLabel(2 ,"HE HV   ");
+ pie_hcal_dcsbytype->SetEntryLabel(3 ,"HB HV   ");
+ pie_hcal_dcsbytype->SetEntryLabel(4 ,"otherDCS");
  pie_hcal_dcsbytype->SetEntryLineWidth(0 ,3);
  pie_hcal_dcsbytype->SetEntryLineWidth(1 ,3);
  pie_hcal_dcsbytype->SetEntryLineWidth(2 ,3);
  pie_hcal_dcsbytype->SetEntryLineWidth(3 ,3);
+ pie_hcal_dcsbytype->SetEntryLineWidth(4 ,3);
 
  TLegend *leg_hcal_dcsbytype = pie_hcal_dcsbytype->MakeLegend();
 
@@ -719,8 +797,8 @@ void downtimes(){
 
  pie_hcal_seubyera->SetLabelFormat("");
  pie_hcal_seubyera->SetCircle(.5,.5,.4);
- pie_hcal_seubyera->SetEntryLabel(0 ,"HF SEU before PS replacement ");
- pie_hcal_seubyera->SetEntryLabel(1 ,"HF SEU after PS replacement ");
+ pie_hcal_seubyera->SetEntryLabel(0 ,"#splitline{before replacement}{(6 weeks)} ");
+ pie_hcal_seubyera->SetEntryLabel(1 ,"#splitline{after replacement}{(16 weeks)} ");
  pie_hcal_seubyera->SetEntryLineWidth(0 ,3);
  pie_hcal_seubyera->SetEntryLineWidth(1 ,3);
 
