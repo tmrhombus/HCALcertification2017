@@ -200,9 +200,11 @@ void downtimes(){
   // Week 43
  float wk43_cmsrecorded = 3426.5;
  float  wk43_HF_305376 = 1.23; // HF bad fiber http://cmsonline.cern.ch/cms-elog/1017097
- float wk43_totalloss =  wk43_HF_305376;
-   // This week there was also 49.4 from turbine failure, NOT HCAL
-   // http://cmsonline.cern.ch/cms-elog/1017701
+ float  wk43_NOTHCAL   = 49.4; // turbine failure in HF rack, not HCAL http://cmsonline.cern.ch/cms-elog/1017701
+ float wk43_totalloss = 
+        wk43_HF_305376 +
+        wk43_NOTHCAL   ; 
+   
 
   // Week 44
  float wk44_cmsrecorded = 2983.4;
@@ -339,11 +341,8 @@ void downtimes(){
 
  float total_HV = HE_HV + HB_HV;
 
- //   Other DCS issues
- float total_otherDCS =
-        wk32_DCS          ; // HBHEb DCS
  //  Total DCS issues
- float total_DCS = total_HFSEU + total_HV + total_otherDCS;
+ float total_DCS = total_HFSEU + total_HV ;
 
  //  ngFEC 
  float total_ngFEC =
@@ -361,10 +360,14 @@ void downtimes(){
         wk43_HF_305376    + // HF bad fiber http://cmsonline.cern.ch/cms-elog/1017097
         wk46_HF_304119    ; // HF,HEP17 bad data http://cmsonline.cern.ch/cms-elog/1012226
 
+
+ float  total_Turbine = wk43_NOTHCAL; // turbine failure in HF rack, not HCAL http://cmsonline.cern.ch/cms-elog/1017701
+
  //   Other losses
  float total_Other =
         wk29_other        + // reported downtime is 118.47
-        wk32_other        ;  // total loss is reported as 32.6
+        wk32_other        +  // total loss is reported as 32.6
+        wk32_DCS          ; // HBHEb DCS
 
  
  ///// Calculations and printouts
@@ -377,7 +380,7 @@ void downtimes(){
  // HFSEU_afterreplace    
  // total_HFSEU           
  // total_HV              
- // total_otherDCS        
+ // total_Turbine
  // total_DCS             
  // total_ngFEC           
  // total_BadData         
@@ -426,25 +429,24 @@ void downtimes(){
  printf("   total_HEHV    %5.1f /pb \n", HE_HV       );       
  printf("   total_HBHV    %5.1f /pb \n", HB_HV       );       
  printf("  total_HV       %5.1f /pb \n", total_HV       );       
- printf("  total_otherDCS %5.1f /pb \n", total_otherDCS );       
  printf(" total_DCS      %5.1f /pb \n", total_DCS      );       
  printf(" total_ngFEC    %5.1f /pb \n", total_ngFEC    );       
  printf(" total_BadData  %5.1f /pb \n", total_BadData  );       
+ printf(" total_Turbine  %5.1f /pb \n", total_Turbine  );
  printf(" total_Other    %5.1f /pb \n", total_Other    ); 
  float total_HCALcrosscheck = 
   total_HFSEU    +       
   total_HV       +       
-  total_otherDCS +       
   total_ngFEC    +       
   total_BadData  +       
+  total_Turbine  +
   total_Other    ; 
  printf(" Total HCAL = %5.1f = %5.1f /pb \n",
   total_HCALloss, total_HCALcrosscheck);
  printf(" DCS %5.1f = %5.1f /pb \n",
   total_DCS      ,
   total_HV       +       
-  total_HFSEU    +
-  total_otherDCS );
+  total_HFSEU    );
 
  printf(" Weekly Breakdown\n");
   printf("  week 24 %5.1f /pb \n", wk24_totalloss);
@@ -643,9 +645,9 @@ void downtimes(){
   total_HFSEU   ,
   HE_HV    ,
   HB_HV    ,
-  total_otherDCS,
   total_ngFEC   ,
   total_BadData ,
+  total_Turbine,
   total_Other    
  };
  int cols_hcal_totalbytype[] = {
@@ -671,9 +673,9 @@ void downtimes(){
  pie_hcal_totalbytype->SetEntryLabel(0 ,"HFSEU   ");
  pie_hcal_totalbytype->SetEntryLabel(1 ,"HE HV   ");
  pie_hcal_totalbytype->SetEntryLabel(2 ,"HB HV   ");
- pie_hcal_totalbytype->SetEntryLabel(3 ,"otherDCS");
- pie_hcal_totalbytype->SetEntryLabel(4 ,"ngFEC   ");
- pie_hcal_totalbytype->SetEntryLabel(5 ,"BadData ");
+ pie_hcal_totalbytype->SetEntryLabel(3 ,"ngFEC   ");
+ pie_hcal_totalbytype->SetEntryLabel(4 ,"BadData ");
+ pie_hcal_totalbytype->SetEntryLabel(5 ,"Turbine ");
  pie_hcal_totalbytype->SetEntryLabel(6 ,"Other   ");
  pie_hcal_totalbytype->SetEntryLineWidth(0 ,3);
  pie_hcal_totalbytype->SetEntryLineWidth(1 ,3);
@@ -704,7 +706,6 @@ void downtimes(){
   total_HFSEU,
   HE_HV ,
   HB_HV ,
-  total_otherDCS
  };
  int cols_hcal_dcsbytype[] = {
   TColor::GetColor("#d7191c"),
@@ -726,11 +727,9 @@ void downtimes(){
  pie_hcal_dcsbytype->SetEntryLabel(0 ,"HFSEU   ");
  pie_hcal_dcsbytype->SetEntryLabel(1 ,"HE HV   ");
  pie_hcal_dcsbytype->SetEntryLabel(2 ,"HB HV   ");
- pie_hcal_dcsbytype->SetEntryLabel(3 ,"otherDCS");
  pie_hcal_dcsbytype->SetEntryLineWidth(0 ,3);
  pie_hcal_dcsbytype->SetEntryLineWidth(1 ,3);
  pie_hcal_dcsbytype->SetEntryLineWidth(2 ,3);
- pie_hcal_dcsbytype->SetEntryLineWidth(3 ,3);
 
  TLegend *leg_hcal_dcsbytype = pie_hcal_dcsbytype->MakeLegend();
 
