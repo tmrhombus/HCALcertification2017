@@ -200,7 +200,7 @@ void downtimes(){
   // Week 43
  float wk43_cmsrecorded = 3426.5;
  float  wk43_HF_305376 = 1.23; // HF bad fiber http://cmsonline.cern.ch/cms-elog/1017097
- float  wk43_NOTHCAL   = 49.4; // turbine failure in HF rack, not HCAL http://cmsonline.cern.ch/cms-elog/1017701
+ float  wk43_NOTHCAL   = 33.; // turbine failure in HF rack, not HCAL http://cmsonline.cern.ch/cms-elog/1017701
  float wk43_totalloss = 
         wk43_HF_305376 +
         wk43_NOTHCAL   ; 
